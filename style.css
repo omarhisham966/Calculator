@@ -1,0 +1,78 @@
+body{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    margin: 0;
+}
+
+.calculator{
+    display: flex;
+    flex-direction: column;
+    background-color: #011024;
+    padding: 20px;
+    border-radius: 15px;
+}
+
+#display{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-end;
+    background-color: #011024;
+    padding: 20px 10px;
+    
+}
+
+.operation, .result{
+    text-align: right;
+    border:none;
+    outline:none;
+    width:100%;
+    background: transparent;
+    color: #29E7FF;
+}
+
+.operation{
+    font-size: 18px;
+}
+
+.result{
+    font-size: 26px;
+}
+
+.row{
+    display: flex;
+    gap: 20px;
+    padding: 10px;
+}
+
+button{
+
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    border: none;
+
+}
+
+.button-seven, .button-eight, .button-nine, .button-four, .button-five, .button-six, .button-one, .button-two, .button-three, .button-zero, .change-sign-button, .decimal-button{
+    background-color:#0F2027;
+    color:white;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.delete-button, .clear-allclear-button, .percentage{
+    background-color: #013253;
+    color: #6BE1FF;
+    font-size: 17px;
+    font-weight: bold;
+}
+
+.multiply,.divide,.addition, .subtraction,.equal-button{
+    background-color: #0072B3;
+    color: white;
+    font-size: 17px;
+    font-weight: bold;
+}
+

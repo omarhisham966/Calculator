@@ -4,42 +4,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Calculator</title>
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
-    <div id="display">
-        <input type="text" class="operation" readonly>
-        <input type="text" class="result" readonly placeholder="0">
-    </div>
+    <div class="calculator">
+        <div id="display">
+            <input type="text" class="operation" readonly>
+            <input type="text" class="result" readonly placeholder="0">
+        </div>
     
-    <div class="row first-row">
-        <button class="delete-button"></button>
-        <button class="clear-allclear-button"></button>
-        <button class="percentage"></button>
-        <button class="divide"></button>
-    </div>
-    <div class="row second-row">
-        <button class="button-seven"></button>
-        <button class="button-eight"></button>
-        <button class="button-nine"></button>
-        <button class="multiply"></button>
-    </div>
-    <div class="row third-row">
-        <button class="button-four"></button>
-        <button class="button-five"></button>
-        <button class="button-six"></button>
-        <button class="subtraction"></button>
-    </div>
-    <div class="row fourth-row">
-        <button class="button-one"></button>
-        <button class="button-two"></button>
-        <button class="button-three"></button>
-        <button class="addition"></button>
-    </div>
-    <div class="row fifth-row">
-        <button class="change-sign-button"></button>
-        <button class="button-zero"></button>
-        <button class="deciaml-button"></button>
-        <button class="equal-button"></button>
+        <div class="row first-row">
+            <button class="delete-button">DEL</button>
+            <button class="clear-allclear-button">AC</button>
+            <button class="percentage">%</button>
+            <button class="divide">÷</button>
+        </div>
+        <div class="row second-row">
+            <button class="button-seven">7</button>
+            <button class="button-eight">8</button>
+            <button class="button-nine">9</button>
+            <button class="multiply">x</button>
+        </div>
+        <div class="row third-row">
+            <button class="button-four">4</button>
+            <button class="button-five">5</button>
+            <button class="button-six">6</button>
+            <button class="subtraction">–</button>
+        </div>
+        <div class="row fourth-row">
+            <button class="button-one">1</button>
+            <button class="button-two">2</button>
+            <button class="button-three">3</button>
+            <button class="addition">+</button>
+        </div>
+        <div class="row fifth-row">
+            <button class="change-sign-button">+/-</button>
+            <button class="button-zero">0</button>
+            <button class="decimal-button">.</button>
+            <button class="equal-button">=</button>
+        </div>
     </div>
 </body>
 </html>
