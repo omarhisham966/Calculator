@@ -11,7 +11,7 @@ const operators = document.querySelectorAll(".operator-btn")
 let firstNumber, operator
 let justCalculated = false
 let currentNumber = ''
-const op = ['÷','x','–','+']
+const op = ['÷','x','+','–']
 ///very important concept better than making a separate eventlistener for each number, doing it for all the number once is a better way by declaring an identical class for all the number buttons than using querySelectorAll than looping by foreach on each number and displaying on the display the button textContent which is the number on the button 
 
 numbers.forEach(btn=>{btn.addEventListener('click',()=>{
@@ -38,6 +38,51 @@ numbers.forEach(btn=>{btn.addEventListener('click',()=>{
     }
     
 
+})})
+
+
+operators.forEach(btn=>{btn.addEventListener('click',()=>{ 
+    let clickedOperator
+    if(btn.textContent === '–'){
+        clickedOperator = '-'
+    }
+    else clickedOperator = btn.textContent
+
+    if(justCalculated){
+        operator = clickedOperator
+        justCalculated = false
+    }
+
+    else if (currentNumber === '' && firstNumber === undefined){
+        if(clickedOperator === '-'){
+            currentNumber = clickedOperator
+        }
+        else{
+            firstNumber = '0'
+            operator = clickedOperator
+        }
+    }
+
+     else if(currentNumber === '-'){
+        mainDisplay.value = '0'
+        currentNumber = ''
+    }
+
+    else if(currentNumber !== '' && firstNumber === undefined){
+        firstNumber = currentNumber
+        operator = clickedOperator
+        currentNumber = ''
+    }
+
+    else if(firstNumber !== undefined && currentNumber === ''){
+        operator = clickedOperator
+    }
+    
+    else if(firstNumber !== undefined && currentNumber !== ''){
+        firstNumber = operate(firstNumber, operator, currentNumber)
+        currentNumber = ''
+        operator = clickedOperator
+    }
 })})
 
 
